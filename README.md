@@ -33,7 +33,7 @@ None.
 ```yaml
 - hosts: servers
   roles:
-    - role: kafka
+    - role: ansible-kafka
 ```
 
 ## License
