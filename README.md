@@ -36,12 +36,10 @@ None.
     - role: ansible-kafka
 ```
 
-## License
 
-MIT
 
 ## Author Information
 
-This role was created by [Your Name] for personal use.
+This role was created by [Kaif Shakeel] for personal use.
 
 Feel free to contribute or improve upon it!
