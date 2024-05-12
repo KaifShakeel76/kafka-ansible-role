@@ -1,4 +1,4 @@
 - hosts: aws_ec2
   become: true
   roles:
-    - /home/kaif/Desktop/vidhyarthi/Tool/Playbook/ansible-kafka
+    - kafka-ansible-role
