@@ -31,9 +31,9 @@ None.
 ## Example Playbook
 
 ```yaml
-- hosts: servers
+- hosts: aws_ec2
   roles:
-    - role: ansible-kafka
+    - /home/kaif/Desktop/vidhyarthi/Tool/Playbook/ansible-kafka    
 ```
 
 
