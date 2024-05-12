@@ -1,2 +1,0 @@
-[servers]
-    server1 ansible_host=3.108.60.141 ansible_user=ubuntu

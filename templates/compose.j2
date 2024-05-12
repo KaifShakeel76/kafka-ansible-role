@@ -1,0 +1,28 @@
+compose:
+  # This sets the ansible_host variable to connect with the private IP address without changing the hostname.
+  ansible_host: private_ip_address
+
+  # This sets location_vars variable as a dictionary with location as a key.
+  location_vars:
+    location: "east_coast"
+    server_type: "ansible_hostname | regex_replace ('(.{6})(.{2}).*', '\\2')"
+
+  # This sets location variable.
+  location: "'east_coast'"
+
+  # This lets you connect over SSM to the instance id.
+  ansible_host: instance_id
+  ansible_connection: 'community.aws.aws_ssm'
+
+  # This defines combinations of host servers, IP addresses, and related SSH private keys.
+  ansible_host: private_ip_address
+  ansible_user: centos
+  ansible_ssh_private_key_file: /home/kaif/Downloads/assignment-3.pem
+
+  # This sets the ec2_security_group_ids variable.
+  ec2_security_group_ids: security_groups | map(attribute='group_id') | list |  join(',')
+
+  # Host variables that are strings need to be wrapped with two sets of quotes.
+  # See https://docs.ansible.com/ansible/latest/plugins/inventory.html#using-inventory-plugins for details.
+  ansible_connection: '"community.aws.aws_ssm"'
+  ansible_user: '"ssm-user"'
